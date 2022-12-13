@@ -1,0 +1,25 @@
+.edge
+    -
+        var data = [
+            {
+                name: 'Быстрая<br>доставка',
+                img: '/images/content/edge/1.svg'
+            },
+            {
+                name: 'Гарантированный сервис',
+                img: '/images/content/edge/2.svg'
+            },
+            {
+                name: 'Ассортимент более<br>50 000 товаров',
+                img: '/images/content/edge/3.svg'
+            },
+            {
+                name: 'Весь товар<br>сертифицирован',
+                img: '/images/content/edge/4.svg'
+            }
+        ];
+    each i in data
+        .edge__item
+            .edge__img
+                img(src=i.img alt="lorem")
+            .edge__name!=i.name

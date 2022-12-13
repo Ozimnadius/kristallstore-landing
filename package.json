@@ -1,0 +1,21 @@
+{
+  "name": "project.ru",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
+    "inputmask": "^5.0.7",
+    "jquery": "^3.6.1",
+    "jquery-validation": "^1.19.5",
+    "normalize.css": "^8.0.1",
+    "ozimnad-reset": "0.0.4",
+    "swiper": "^8.4.5"
+  }
+}

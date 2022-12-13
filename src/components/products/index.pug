@@ -1,0 +1,28 @@
+.products
+    .products__top.top
+        h2.top__title Рекомендованные товары
+        .top__nav
+            button(type='button').top__arr.products__prev
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32.1041 34.5417L22.5625 25L32.1041 15.4375L29.1666 12.5L16.6666 25L29.1666 37.5L32.1041 34.5417Z" fill="currentColor"/>
+                </svg>
+            button(type='button').top__arr.products__next
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.8959 34.5417L27.4375 25L17.8959 15.4375L20.8334 12.5L33.3334 25L20.8334 37.5L17.8959 34.5417Z" fill="currentColor"/>
+                </svg>
+
+    .products__slider
+        .products__swiper.swiper
+            .swiper-wrapper
+                each i in [1,2,3,4,5,6,7,8]
+                    a(href="/").products__item.product.swiper-slide
+                        span.product__img
+                            img(src="/images/content/products/img.webp" alt="lorem")
+                        span.product__name Ecosoft Standard 6-50P Фильтр обратного осмоса с помпой
+                        ul.product__list
+                            li.product__li Высота, мм:  455
+                            li.product__li Глубина, мм:  195
+                            li.product__li Габариты (ВхШхГ), см:  45.5/41/19.5
+                        span.product__price 17 424 ₽/шт
+
+

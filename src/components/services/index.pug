@@ -1,0 +1,35 @@
+.services
+    h2.services__title Услуги
+    .services__items
+        -
+            var data = [
+                {
+                    img: '/images/content/services/1.webp',
+                    name: 'Монтаж системы отопления и тёплого пола',
+                    txt: 'Монтаж систем отопления – это дело, которым мы профессионально занимаемся уже более 15 лет и готовы делиться полученными знаниями и опытом с нашими клиентами!'
+                },
+                {
+                    img: '/images/content/services/2.webp',
+                    name: 'Система водоснабжения под ключ',
+                    txt: 'Монтаж систем отопления – это дело, которым мы профессионально занимаемся уже более 15 лет и готовы делиться полученными знаниями и опытом с нашими клиентами!'
+                },
+                {
+                    img: '/images/content/services/3.webp',
+                    name: 'Просчёт вашей сметы материалов со скидкой до 25%',
+                    txt: 'Мы знаем как вам сэкономить деньги, не теряя в качестве. Сделаем полный аудит вашей сметы. Затем предложим самый оптимальный вариант.'
+                }
+            ];
+        each i in data
+            .services__item.service
+                .service__left
+                    .service__img
+                        img(src=i.img alt="lorem")
+                .service__right
+                    .service__name!=i.name
+                    .service__txt= i.txt
+                    button(type='button' data-event='openForm').service__btn Заказать услугу
+                    <svg width="697" height="648" viewBox="0 0 697 648" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M314.42 386.245L0.995653 451.067L409.903 84.1962L314.42 386.245Z" fill="#E7E7E7"/>
+                    <path d="M338.63 393.898L434.114 91.8497L553.809 625.822L338.63 393.898Z" fill="#E7E7E7"/>
+                    <path d="M321.71 407.118L10.0203 480.647L538.534 647.721L321.71 407.118Z" fill="#E7E7E7"/>
+                    </svg>

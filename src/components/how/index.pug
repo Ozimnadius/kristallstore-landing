@@ -1,0 +1,34 @@
+.how
+
+    .how__block
+        h2.how__title Как заказать
+        .how__pipline
+            picture
+                source(srcset="/images/content/how/pipline-tablet.svg" media='(max-width: 1439.98px)')
+                source(srcset="/images/content/how/pipline.svg" media='(max-width: 1919.98px)')
+                img(src="/images/content/how/pipline.svg" alt="lorem")
+        .how__items
+            -
+                var data = [
+                    {
+                        name: 'Заявка на услугу',
+                        txt: 'Наши специалисты связываются с вами и уточняют детали'
+                    },
+                    {
+                        name: 'Сбор информации',
+                        txt: 'Опрос и учет пожеланий заказчика, при необходимости выезд на осмотр объекта и детальный замер'
+                    },
+                    {
+                        name: 'Проектирование',
+                        txt: 'Выполним проект системы отопления с учётом теплопотерь здания, подбор оптимального оборудования, составление сметы.'
+                    },
+                    {
+                        name: 'Заключаем договор',
+                        txt: 'Согласовываем все этапы работы, заключаем договор, доставка материала на объект, монтаж оборудования, пусконаладочные работы'
+                    }
+                ]
+            each i in data
+                .how__item
+                    .how__name= i.name
+                    .how__txt= i.txt
+        button(type='button' data-event='openForm').how__btn Заказать рассчет

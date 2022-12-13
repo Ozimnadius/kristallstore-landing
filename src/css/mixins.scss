@@ -1,0 +1,151 @@
+@use "sass:color";
+
+@function rem($size) {
+  $remSize: $size / $font-size;
+  @return $remSize * 1rem;
+}
+
+@mixin fz($size) {
+  font-size: $size;
+  font-size: rem($size);
+}
+
+@function lh($size1, $size2) {
+  $lh: $size2 / $size1;
+  @return $lh;
+}
+
+@mixin content() {
+  ul {
+    padding-left: 40px;
+
+    li {
+      list-style: disc;
+    }
+  }
+
+  @include headers;
+
+  h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 1em 0;
+  }
+
+}
+
+@mixin headers() {
+  h1 {
+    font-size: 2.4em;
+  }
+
+  h2 {
+    font-size: 2.2em;
+  }
+
+  h3 {
+    font-size: 1.8em;
+  }
+
+  h4 {
+    font-size: 1.4em;
+  }
+
+  h5 {
+    font-size: 1.2em;
+  }
+
+  h6 {
+    font-size: 1em;
+    font-weight: 400;
+  }
+}
+
+@mixin tr() {
+  transition: var(--transition);
+}
+
+@mixin link {
+  color: var(--color-main);
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  &:hover {
+    color: var(--color-second);
+  }
+}
+
+@mixin btn {
+  font-family: Muller, sans-serif;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 118%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 767.98px){
+    font-size: 14px;
+  }
+}
+
+@mixin btn-radius {
+  @include btn;
+  border-radius: 7px;
+  @media (max-width: 767.98px){
+    border-radius: 4px;
+  }
+}
+
+@mixin btn-main {
+  @include btn-radius;
+  color: var(--color-bg);
+  background-color: var(--color-main);
+  transition: background-color var(--transition);
+
+  &:hover {
+    background-color: var(--color-second);
+  }
+}
+
+@mixin btn-second {
+  @include btn-radius;
+  color: var(--color-bg);
+  background-color: var(--color-second);
+  transition: background-color var(--transition);
+
+  &:hover {
+    background-color: color.scale($color-second, $lightness: 20%);
+
+  }
+}
+
+@mixin btn-border-orange {
+  @include btn;
+  color: var(--color-second);
+  border: 1px solid var(--color-second);
+  border-radius: 100vmax;
+  transition: color,background-color var(--transition);
+
+  &:hover {
+    background-color: var(--color-second);
+    color: var(--color-bg);
+  }
+}
+
+@mixin h2{
+  color: var(--color-txt);
+  font-family: var(--font-2);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 118%;
+  text-transform: uppercase;
+  @media (max-width: 767.98px){
+    font-size: 24px;
+  }
+}

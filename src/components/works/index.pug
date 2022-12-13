@@ -1,0 +1,40 @@
+.works
+    .works__top.top
+        h2.top__title Примеры работ
+        a(href="/").top__link.link
+            span Смотреть всю галерею
+            <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.8959 34.5417L27.4375 25L17.8959 15.4375L20.8334 12.5L33.3334 25L20.8334 37.5L17.8959 34.5417Z" fill="currentColor"/>
+            </svg>
+    .works__grid
+        -
+            var data = [
+                {
+                    thmb: '/images/content/works/1thmb.webp',
+                    img: '/images/content/works/1.webp'
+                },
+                {
+                    thmb: '/images/content/works/2thmb.webp',
+                    img: '/images/content/works/2.webp'
+                },
+                {
+                    thmb: '/images/content/works/3thmb.webp',
+                    img: '/images/content/works/3.webp'
+                },
+                {
+                    thmb: '/images/content/works/4thmb.webp',
+                    img: '/images/content/works/4.webp'
+                },
+                {
+                    thmb: '/images/content/works/5thmb.webp',
+                    img: '/images/content/works/5.webp'
+                },
+                {
+                    thmb: '/images/content/works/6thmb.webp',
+                    img: '/images/content/works/6.webp'
+                }
+            ];
+        each i in data
+            a(href=i.img data-fancybox="works").works__item
+                img(src=i.thmb alt="lorem")
+

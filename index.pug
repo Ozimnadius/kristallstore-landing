@@ -1,0 +1,34 @@
+extends src/core/main
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main.page
+        section
+            .container
+                include src/components/banner/index
+        section.margin-bottom-80
+            .container
+                include src/components/edge/index
+        section#services.margin-bottom-110
+            .container
+                include src/components/services/index
+        section#how.margin-bottom-140
+            .container
+                include src/components/how/index
+        section#products.padding-top-140.padding-bottom-140.bg-white.margin-bottom-110
+            .container
+                include src/components/products/index
+        section#works.margin-bottom-140
+            .container
+                include src/components/works/index
+        section#revs.margin-bottom-130
+            .container
+                include src/components/revs/index
+        section
+            .container
+                include src/components/promo/index
+
+
+

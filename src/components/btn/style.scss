@@ -1,0 +1,10 @@
+.btn{
+  display: inline-flex;
+  padding: 15px 35px;
+  background: var(--color-link);
+  color: var(--color-bg);
+
+  &:hover{
+    color: var(--color-link-hover);
+  }
+}

@@ -1,0 +1,22 @@
+footer.footer#contacts
+    .container
+        .footer__grid
+            .footer__logo
+                a(href="/")
+                    img(src="/images/content/logo.svg" alt="lorem")
+            .footer__items.header__items
+                .header__item
+                    .header__item-name Адрес
+                    .header__item-val
+                        .header__addr!=GLOBALS.addr
+                .header__item
+                    .header__item-name Телефон
+                    .header__item-val
+                        .header__tels
+                            each i in GLOBALS.tels
+                                .header__tel
+                                    a(href=i.href)= i.val
+            .footer__right
+                .footer__policy
+                    a(href="/") Политика конфиденциальности
+                .footer__copy © 2022 КРИСТАЛЛ

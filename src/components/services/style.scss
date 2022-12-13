@@ -1,0 +1,144 @@
+.services {
+
+  &__title {
+    @include h2;
+    margin-bottom: 65px;
+    @media (max-width: 1439.98px) {
+      margin-bottom: 45px;
+    }
+    @media (max-width: 767.98px) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    gap: 70px;
+    @media (max-width: 1439.98px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 767.98px) {
+      grid-template-columns: 100%;
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    &:nth-child(1) {
+      svg {
+        left: 160px;
+        top: -280px;
+        transform: rotate(4.74deg);
+
+      }
+    }
+
+    &:nth-child(2) {
+      svg {
+        left: -80px;
+        top: -230px;
+        transform: rotate(53.92deg);
+      }
+    }
+
+    &:nth-child(3) {
+      svg {
+        left: 180px;
+        top: -220px;
+        transform: rotate(-39.91deg);
+      }
+    }
+
+
+  }
+
+}
+
+.service {
+  display: grid;
+  grid-template-columns: 437px 1fr;
+  gap: 115px;
+  align-items: center;
+  border-radius: 35px;
+  overflow: hidden;
+  background-color: var(--color-grey);
+  @media (max-width: 1439.98px) {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 10px;
+  }
+
+  &__img {
+
+    img {
+      display: block;
+      border-radius: 20px;
+      @media (max-width: 1439.98px) {
+        border-radius: 10px;
+      }
+      @media (max-width: 767.98px) {
+        border-radius: 0;
+        aspect-ratio: 355/213;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__right {
+    position: relative;
+    padding: 20px 20px 20px 0;
+    @media (max-width: 1439.98px) {
+      padding: 25px 25px 35px;
+      flex-grow: 1;
+    }
+
+    svg {
+      display: block;
+      position: absolute;
+      z-index: 0;
+      max-width: initial;
+      @media (max-width: 1439.98px) {
+        display: none;
+      }
+    }
+
+    & > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__name {
+    max-width: 630px;
+    font-size: 41px;
+    font-weight: 700;
+    line-height: 110%;
+    margin-bottom: 20px;
+    @media (max-width: 1439.98px) {
+      font-size: 20px;
+    }
+  }
+
+  &__txt {
+    max-width: 522px;
+    margin-bottom: 20px;
+    @media (max-width: 1439.98px) {
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__btn {
+    @include btn-main;
+    width: 208px;
+    height: 51px;
+    @media (max-width: 1439.98px) {
+      width: 169px;
+      height: 41px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+  }
+}
